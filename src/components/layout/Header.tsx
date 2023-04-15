@@ -2,6 +2,7 @@ import logo from "/public/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import Wrapper from "@/components/shared/Wrapper";
+import React from "react";
 
 const Header = () => {
   return (
@@ -19,7 +20,22 @@ const Header = () => {
               <Link href={"/"}>Home</Link>
             </li>
             <li>
-              <Link href={"https://www.panaverse.co/"}>Courses</Link>
+             
+              {
+                <div className="flex">
+                  <Link href={"/"}>Course</Link>
+                  <select id="course" name="course" className="text-black">
+                    <option>WMD</option>
+                    <option>AI</option>
+                    <option>CNC</option>
+                    <option>IOT</option>
+                    <option>GB</option>
+                    <option>NPA</option>
+                  </select>
+                </div>
+              }
+             
+              {/* <Link href={"https://www.panaverse.co/"}>Courses</Link> */}
             </li>
             <li>
               <Link href={"https://portal.piaic.org"}>Sign up</Link>
